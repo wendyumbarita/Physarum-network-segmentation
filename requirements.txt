@@ -1,0 +1,8 @@
+# Version ranges are not pinned because the experiment's original environment lockfile was not provided.
+numpy
+Pillow
+matplotlib
+scikit-image
+torch
+torchvision
+segmentation-models-pytorch
