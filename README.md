@@ -29,7 +29,7 @@ The scripts expect the data organization documented in [Data setup](DATA_SETUP.m
 ## Evaluation and Results
 
 We evaluated all segmentation models using Dice coefficient, Intersection over Union (IoU), centerline Dice, recall, and precision. In general, the patch-based approaches outperformed the resized-image models, particularly in their ability to recover fine network details. Among the evaluated models, the patch-based U-Net trained with a combined Tversky + BCE loss achieved the highest centerline Dice score, suggesting that this loss function better preserves thin, connected structures in the Physarum network.
-(figures/pred_models.png) Representative predictions from the patch-based U-Net with Tversky + BCE loss. The model captures the main network structure while preserving many thin branches.
+![Predictions from a zoomed area of slime mold](figures/pred_models.png) Representative predictions from the patch-based U-Net with Tversky + BCE loss. The model captures the main network structure while preserving many thin branches.
 
 
 ## Run Locally
