@@ -28,9 +28,9 @@ The scripts expect the data organization documented in [Data setup](DATA_SETUP.m
 
 ## Evaluation and Results
 
-Training and validation loss and Dice curves are produced by the scripts. Numeric results and example predictions have not been included here because they were not supplied with these code files. A meaningful comparison of the three approaches will require evaluation on a consistent held-out dataset; results from different datasets or image-processing settings should not be compared as if they are controlled experiments.
+We evaluated all segmentation models using Dice coefficient, Intersection over Union (IoU), centerline Dice, recall, and precision. In general, the patch-based approaches outperformed the resized-image models, particularly in their ability to recover fine network details. Among the evaluated models, the patch-based U-Net trained with a combined Tversky + BCE loss achieved the highest centerline Dice score, suggesting that this loss function better preserves thin, connected structures in the Physarum network.
+(figures/pred_models.png) Representative predictions from the patch-based U-Net with Tversky + BCE loss. The model captures the main network structure while preserving many thin branches.
 
-Once approved for sharing, useful figures to add include an original image alongside its ground-truth and predicted masks, plus validation Dice/loss curves for each experiment.
 
 ## Run Locally
 
@@ -50,4 +50,4 @@ The validation Dice values computed during training are patch-based for the patc
 
 ## Research and Attribution
 
-This repository documents my segmentation-model implementation within an ongoing collaborative research project. Experimental data, collaborators' contributions, and any unpublished results should be credited and shared only with appropriate approval.
+This repository documents my segmentation-model implementation within an ongoing collaborative research project. 
